@@ -22,7 +22,7 @@ public class ReleasePokemon implements Task {
             for (List<Pokemon> list : groups.values()) {
                 Collections.sort(list, (a, b) -> a.getCp() - b.getCp());
                 for (int i = 0; i < list.size() - context.getDupesToKeep(); i++) {
-                    System.out.println("Transferring " + (i + 1) + "/" + list.size() + " " + list.get(i).getPokemonId() + " lvl " + list.get(i).getCp());
+                    System.out.println("Transferring " + (i + 1) + "/" + (list.size() - context.getDupesToKeep()) + " " + list.get(i).getPokemonId() + " lvl " + list.get(i).getCp());
                     list.get(i).transferPokemon();
                 }
             }
