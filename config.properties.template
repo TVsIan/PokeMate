@@ -2,10 +2,11 @@
 username=
 password=
 latitude=
-longitude=
+longitude=-
 api-key=
 preferred_ball=ITEM_POKE_BALL
 # should the bot EVER drop items (true/false)
 drop_items=true
 # Meters per second
-speed=2.778
+speed=2.25
+dupes=3
