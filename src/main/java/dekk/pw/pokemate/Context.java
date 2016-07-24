@@ -23,6 +23,7 @@ public class Context {
     private RequestEnvelopeOuterClass.RequestEnvelope.AuthInfo authInfo;
     private int preferredBall;
     private String googleApiKey;
+    private int dupesToKeep;
 
     public Context(PokemonGo go, PlayerProfile profile, double speed, boolean walking, RequestEnvelopeOuterClass.RequestEnvelope.AuthInfo authInfo, OkHttpClient http) {
         this.api = go;
@@ -52,6 +53,10 @@ public class Context {
     public int getPreferredBall() {
         return preferredBall;
     }
+
+    public void setDupesToKeep(int dupesToKeep) { this.dupesToKeep = dupesToKeep; }
+
+    public int getDupesToKeep() { return dupesToKeep; }
 
     public void setPreferredBall(int preferredBall) {
         this.preferredBall = preferredBall;

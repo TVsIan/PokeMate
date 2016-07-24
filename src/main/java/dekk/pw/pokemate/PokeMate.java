@@ -49,6 +49,7 @@ public class PokeMate {
         context.getLat().set(Double.parseDouble(properties.getProperty("latitude")));
         context.getLng().set(Double.parseDouble(properties.getProperty("longitude")));
         context.setGoogleApiKey(properties.getProperty("api-key"));
+        context.setDupesToKeep(Integer.parseInt(properties.getProperty("dupes")));
         go.setLocation(context.getLat().get(), context.getLng().get(), 0);
         taskControllor = new TaskController(context);
         taskControllor.start();
